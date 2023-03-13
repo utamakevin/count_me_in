@@ -1,0 +1,19 @@
+<a href="/event/new">Create an event</a>
+<div class="main">
+    <% for(let event of events) { %>
+        <a href="/event/<%= event.id %>">
+            <article>
+                <img src="<%= event.image_url %>" alt="">
+                <div>
+                    <h2><%= event.title %></h2>
+                    <h3><%= event.description %></h3>
+                    
+                    <div class="footer">
+                        <p class="time">x people joined</p>
+                        <p class="location">Melbourne</p>
+                    </div>
+                </div>
+            </article>
+        </a>
+    <% } %>
+</div>

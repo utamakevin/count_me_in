@@ -1,0 +1,13 @@
+<form action="/event" method="post">
+    <label for="">Event Title</label>
+    <input type="text" name="title">
+    
+    <label for="">Description</label>
+    <input type="text" name="description">
+    <label for="">Image URL</label>
+    <input type="text" name="image_url">
+    <input type="hidden" name="user_id" value="<%= userId %>">
+    <button>Create</button>
+</form>
+
+<!-- res.locals.currentUser -->
