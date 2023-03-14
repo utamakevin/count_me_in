@@ -26,7 +26,7 @@ router.get('/event/new', ensureLoggedIn, (req, res) => {
 router.get('/event/:id', ensureLoggedIn, (req, res) => {
     const sql = `SELECT * FROM events WHERE id=${req.params.id}`
     db.query(sql, (dbReq, dbRes) => {
-        res.render('event_details', { event: dbRes.rows[0] })
+        res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId })
     })
 })
 

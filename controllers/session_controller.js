@@ -15,7 +15,7 @@ router.post('/signup/new', (req, res) => {
     const sql = `SELECT * FROM users WHERE username = $1;`
 
     db.query(sql, [req.body.username], (err, dbRes) => {
-        console.log(dbRes.rows)
+        // console.log(dbRes.rows)
         if(dbRes.rows.length === 0) {
             const username = req.body.username
             const plainTextPassword = req.body.password

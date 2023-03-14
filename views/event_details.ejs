@@ -1,9 +1,12 @@
 <h2><%= event.title %></h2>
 <p><%= event.description %></p>
 
-<form action="/count_in">
-    <input type="hidden" name="event.id">
-    <!-- <input type="hidden" name="user.id"> -->
+<% if(event.user_id == sessionId) { %>
+    <p><a href="/edit_event/<%= event.id %>">Edit Event</a></p>
 
+<% } %>
+
+<form action="/count_in">
+    <input type="hidden" name="event.id" value="<%= event.id %>">
     <button>Count me in!</button>
 </form>
