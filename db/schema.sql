@@ -12,9 +12,10 @@ CREATE TABLE events (
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username TEXT,
-    password_digest TEXT
+    password_digest TEXT,
+    event_id_joined TEXT
 );
 
-INSERT INTO events (title, image_url, user_id, description) VALUES ('Cycling', 'http://via.placeholder.com/640x360', 1, 'lorem ipsum');
+INSERT INTO events (title, image_url, user_id, description, number_joined) VALUES ('Cycling', 'http://via.placeholder.com/640x360', 1, 'lorem ipsum', 0);
 
 ALTER TABLE events ADD number_joined INTEGER;

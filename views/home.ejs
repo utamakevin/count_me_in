@@ -1,4 +1,7 @@
-<a href="/event/new">Create an event</a>
+<div class="create_new_button">
+    <h2 id="create_new_button"><a href="/event/new">Create your event</a></h2>
+</div>
+
 <div class="main">
     <% for(let event of events) { %>
         <a href="/event/<%= event.id %>">
@@ -9,7 +12,7 @@
                     <h3><%= event.description %></h3>
                     
                     <div class="footer">
-                        <p class="time"><%= event.number_joined %> people joined</p>
+                        <p class="number_joined"><%= event.number_joined %> people joined</p>
                         <p class="location">Melbourne</p>
                     </div>
                 </div>
