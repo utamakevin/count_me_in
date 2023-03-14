@@ -12,3 +12,4 @@ function viewHelpers(req, res, next) {
 }
 
 module.exports = viewHelpers
+

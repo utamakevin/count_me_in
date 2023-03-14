@@ -4,11 +4,11 @@ const bcrypt = require('bcrypt')
 const db = require('./../db')
 
 router.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login', { layout: 'login_layout' })
 })
 
 router.get('/signup', (req, res) => {
-    res.render('signup')
+    res.render('signup', { layout: 'login_layout' })
 })
 
 router.post('/signup/new', (req, res) => {
@@ -44,7 +44,8 @@ router.post('/sessions', (req, res) => {
 
     db.query(sql, (err, dbRes) => {
         if(dbRes.rows.length === 0) {
-            res.render('login') // redirect to wrong cred
+            // res.render('login') // redirect to wrong cred
+            res.render('wrong_cred', { layout: 'login_layout' })
             return  
         } 
 
@@ -53,9 +54,11 @@ router.post('/sessions', (req, res) => {
         bcrypt.compare(password, user.password_digest, (err, result) => {
             if(result) {
                 req.session.userId = user.id
+                req.session.username = user.username
                 res.redirect('/')
             } else {
-                res.render('login') // redirect to wrong cred
+                // res.render('login') // redirect to wrong cred
+                res.render('wrong_cred', { layout: 'login_layout' })
             }
         })
     })
@@ -63,7 +66,7 @@ router.post('/sessions', (req, res) => {
 
 router.delete('/sessions', (req, res) => {
     req.session.destroy(() => { 
-        res.redirect('/login')
+        res.redirect('/')
     })
 })
 

@@ -14,8 +14,20 @@
         </div>
         <div class="header_right">
             <ul>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/signup">Sign Up</a></li>
+                <% if(locals.isLoggedIn()) { %>
+                    Welcome <%= username %>
+                <% } else { %>
+                    <li><a href="/login">Login</a></li>
+                <% } %>
+
+                <% if(locals.isLoggedIn()) { %>
+                    <form action="/sessions" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <button>Log out</button>
+                    </form>
+                <% } else { %>
+                    <li><a href="/signup">Sign Up</a></li>
+                <% } %>
             </ul>
             </div>
         </div>

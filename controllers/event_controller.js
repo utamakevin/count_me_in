@@ -11,9 +11,11 @@ router.get('/', (req, res) => {
         if(dbRes.rows.length === 0) {
             res.render('no_list_home')
         } else {
+            res.locals.userId = req.session.userId
             res.render('home', { 
-                events: dbRes.rows, 
-                username: req.session.username 
+                events: dbRes.rows,
+                username: req.session.username,
+                numberJoined: '2'
             })
         }
     })
@@ -26,7 +28,7 @@ router.get('/event/new', ensureLoggedIn, (req, res) => {
 router.get('/event/:id', ensureLoggedIn, (req, res) => {
     const sql = `SELECT * FROM events WHERE id=${req.params.id}`
     db.query(sql, (dbReq, dbRes) => {
-        res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId })
+        res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId, username: req.session.username })
     })
 })
 
