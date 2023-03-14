@@ -14,22 +14,21 @@ router.get('/', (req, res) => {
             res.locals.userId = req.session.userId
             res.render('home', { 
                 events: dbRes.rows,
-                username: req.session.username,
-                numberJoined: '2'
+                username: req.session.username
             })
         }
     })
 })
 
 router.get('/event/new', ensureLoggedIn, (req, res) => {
-    res.render('new_event', { userId: req.session.userId})
+    res.render('new_event', { userId: req.session.userId, username: req.session.username})
 })
 
 
 router.get('/event/:id', ensureLoggedIn, (req, res) => {
     const sql = `SELECT * FROM events WHERE id=$1`
     db.query(sql, [req.params.id], (dbReq, dbRes) => {
-        res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId, username: req.session.username })
+        res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId, username: req.session.username, numberJoined: dbRes.rows[0].number_joined })
     })
 })
 
@@ -53,6 +52,20 @@ router.post('/event/edit', (req, res) => {
     
     db.query(sql, [req.body.title, req.body.description, req.body.image_url, req.body.id], (req, dbRes) => {
         res.redirect('/')
+    })
+})
+
+router.post('/count_in', (req, res) => {
+    const sql = 'SELECT * FROM events where id=$1;'
+    db.query(sql, [req.body.id], (db1Req, db1Res) => {
+        const numberJoined = Number(db1Res.rows[0].number_joined)
+        const numberJoinedAdded = numberJoined + 1
+
+        const sql2 = 'UPDATE events SET number_joined=$1 WHERE id=$2;'
+        db.query(sql2, [numberJoinedAdded, req.body.id], (dbReq, dbRes) => {
+            res.redirect(`/event/${db1Res.rows[0].id}`)
+            // res.redirect('/')
+        })
     })
 })
 

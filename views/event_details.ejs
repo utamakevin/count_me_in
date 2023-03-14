@@ -5,7 +5,9 @@
     <p><a href="/event/edit/<%= event.id %>">Edit Event</a></p>
 <% } %>
 
-<form action="/count_in">
-    <input type="hidden" name="event.id" value="<%= event.id %>">
+<p><%= numberJoined %> people joined</p>
+
+<form action="/count_in" method="post">
+    <input type="hidden" name="id" value="<%= event.id %>">
     <button>Count me in!</button>
 </form>

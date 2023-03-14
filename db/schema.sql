@@ -5,7 +5,8 @@ CREATE TABLE events (
     title VARCHAR(200),
     image_url TEXT,
     user_id INTEGER,
-    description TEXT
+    description TEXT,
+    number_joined INTEGER
 );
 
 CREATE TABLE users (
@@ -15,3 +16,5 @@ CREATE TABLE users (
 );
 
 INSERT INTO events (title, image_url, user_id, description) VALUES ('Cycling', 'http://via.placeholder.com/640x360', 1, 'lorem ipsum');
+
+ALTER TABLE events ADD number_joined INTEGER;
