@@ -25,21 +25,43 @@ router.get('/event/new', ensureLoggedIn, (req, res) => {
     res.render('new_event', { userId: req.session.userId})
 })
 
+
 router.get('/event/:id', ensureLoggedIn, (req, res) => {
-    const sql = `SELECT * FROM events WHERE id=${req.params.id}`
-    db.query(sql, (dbReq, dbRes) => {
+    const sql = `SELECT * FROM events WHERE id=$1`
+    db.query(sql, [req.params.id], (dbReq, dbRes) => {
         res.render('event_details', { event: dbRes.rows[0], sessionId: req.session.userId, username: req.session.username })
     })
 })
 
+router.get('/event/edit/:id', ensureLoggedIn, (req, res) => {
+    const sql = `SELECT * FROM events WHERE id=$1`
+    db.query(sql, [req.params.id], (dbReq, dbRes) => {
+        res.render('edit_event', { event: dbRes.rows[0], username: req.session.username })
+    })
+})
 
 router.post('/event', (req, res) => {
     const sql = 'INSERT INTO events (title, description, image_url, user_id) VALUES ($1, $2, $3, $4);'
-
-    console.log(req.body)
     
     db.query(sql, [req.body.title, req.body.description, req.body.image_url, req.session.userId], (req, dbRes) => {
         res.redirect('/')
+    })
+})
+
+router.post('/event/edit', (req, res) => {
+    const sql = 'UPDATE events SET title = $1, description = $2, image_url = $3 WHERE id=$4;'
+    
+    db.query(sql, [req.body.title, req.body.description, req.body.image_url, req.body.id], (req, dbRes) => {
+        res.redirect('/')
+    })
+})
+
+router.delete('/event/:id', (req, res) => {
+    console.log(req.params.id)
+    const sql = 'DELETE FROM events WHERE id=$1;'
+
+    db.query(sql, [req.params.id], (req, dbRes) => {
+        res.render('event_deleted', { layout: 'login_layout' })
     })
 })
 

@@ -1,9 +1,8 @@
 <h2><%= event.title %></h2>
 <p><%= event.description %></p>
 
-<% if(event.user_id == sessionId) { %>
-    <p><a href="/edit_event/<%= event.id %>">Edit Event</a></p>
-
+<% if(event.user_id === sessionId) { %>
+    <p><a href="/event/edit/<%= event.id %>">Edit Event</a></p>
 <% } %>
 
 <form action="/count_in">
