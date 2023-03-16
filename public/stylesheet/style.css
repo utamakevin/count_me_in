@@ -176,12 +176,6 @@ article {
     width: 400px;
 }
 
-@media screen and (max-width: 410px) {
-    article {
-        width: 95%;
-    }
-}
-
 h1 {
     color:dodgerblue;
     text-shadow: 2px 2px white;
