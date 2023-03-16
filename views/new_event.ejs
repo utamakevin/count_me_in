@@ -1,12 +1,14 @@
-<form action="/event" method="post">
-    <label for="">Event Title</label>
-    <input type="text" name="title">
-    
-    <label for="">Description</label>
-    <input type="text" name="description">
-    <label for="">Image URL</label>
-    <input type="text" name="image_url">
-    <input type="hidden" name="user_id" value="<%= userId %>">
-    <input type="hidden" name="number_joined" value="0">
-    <button>Create</button>
-</form>
+<div class="input_div">
+    <form action="/event" method="post">
+        <label for="">Event Title</label>
+        <input type="text" name="title">
+        
+        <label for="">Description</label>
+        <input type="text" class="description_box" name="description">
+        <label for="">Image URL</label>
+        <input type="text" name="image_url">
+        <input type="hidden" name="user_id" value="<%= userId %>">
+        <input type="hidden" name="number_joined" value="0">
+        <button>Create</button>
+    </form>
+</div>

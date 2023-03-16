@@ -8,6 +8,7 @@
 <p><%= numberJoined %> people joined</p>
 
 <form action="/count_in" method="post">
-    <input type="hidden" name="id" value="<%= event.id %>">
+    <input type="hidden" name="event_id" value="<%= event.id %>">
+    <input type="hidden" name="user_id" value="<%= sessionId %>">
     <button class="signup_button_div">Count me in!</button>
 </form>

@@ -118,6 +118,11 @@ body a {
     color: cornsilk;
 }
 
+.directory_link {
+    color: #000;
+    text-decoration: underline;
+}
+
 .create_new_button {
     
     margin: 15px auto;
@@ -214,7 +219,7 @@ h3, p {
     text-align: right;
 }
 
-.login, .about, .contact-us {
+.input_div, .about, .contact-us {
     border: 5px solid cornsilk;
     border-radius: 10px;
     width: fit-content;
@@ -222,11 +227,11 @@ h3, p {
     padding: 20px;
 }
 
-.login input, .about input, .contact-us input {
+.input_div input, .about input, .contact-us input {
     margin: 10px;
 }
 
-.login button {
+.input_div button {
     background: #5E5DF0;
     border-radius: 999px;
     box-shadow: #5E5DF0 0 10px 20px -10px;
@@ -249,12 +254,10 @@ h3, p {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.login button:hover {
+.input_div button:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 p {
     color: black;
 }
-
-

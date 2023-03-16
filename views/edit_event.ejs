@@ -1,15 +1,21 @@
 <form action="/event/edit" method="post">
-    <label for="">Event Title</label>
-    <input type="text" name="title" value="<%= event.title %>">
-    
-    <label for="">Description</label>
-    <input type="text" name="description" value="<%= event.description %>">
-
-    <label for="">Image URL</label>
-    <input type="text" name="image_url" value="<%= event.image_url %>">
-
-    <input type="hidden" name="id" value="<%= event.id %>">
-    <input type="hidden" name="user_id" value="<%= event.userId %>">
+    <div class="input_div">
+    <div>
+        <label for="">Event Title</label>
+        <input type="text" name="title" value="<%= event.title %>">
+    </div>
+    <div>
+        <label for="">Description</label></td><td><input type="text" class="description_box" name="description" value="<%= event.description %>"></td></tr>
+    </div>    
+    <div>
+        <label for="">Image URL</label>
+        <input type="text" name="image_url" value="<%= event.image_url %>">
+    </div>    
+    <div>
+        <input type="hidden" name="id" value="<%= event.id %>">
+        <input type="hidden" name="user_id" value="<%= event.userId %>">
+    </div>
+    </div>
     <button>Save Changes</button>
 </form>
 
