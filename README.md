@@ -1,8 +1,8 @@
 # Welcome to My Second App
-Count Me In is a scheduling app that takes into account different timezones of its' users. 
+Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. The app can be accessed through this link https://countmein.onrender.com/.
 
 # How does it work?
-After creating an account, users can add their timezone. In the app, people can create groups or join existing ones, where their timezones are taken into account inside the group. 
+On the home page, user can see different activities created by users. Upon creation, users are given the option to add a title, description and 
 
 
 # Flow
