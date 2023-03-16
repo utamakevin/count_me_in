@@ -2,7 +2,9 @@
 Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. The app can be accessed through this link https://countmein.onrender.com/.
 
 # How does it work?
-On the home page, user can see different activities created by users. Upon creation, users are given the option to add a title, description and 
+On the home page, user can see different activities created by users. Upon creation, users are given the option to add a title, description and image. After submission, the event will be available on the home page. 
+
+When clicked, the event will show the details. Only the author can edit the event. Non-authors can still access the event's details page and open the expanded description. All logged-in users can press the 'Count me in' button to add themselves to the group. The number of people joined will be updated. 
 
 
 # Flow
