@@ -53,7 +53,7 @@ User can press the Count Me In button and register their attendance to the event
 - A message that there is no events created yet will appear if there is no event on the homescreen so the app does not crash when there is no events in the database.
 - The description input bar could be bigger to indicate that the user can input long passage in it.
 - The user's details are stored in the session object and therefore can be accessed almost anywhere in the app, allowing features such as displaying the username on the header.
-- The css is responsive in smaller screen. This feature is only tested in desktop browser and does not take into account mobile experience.
+- The css is responsive in smaller screen.
 - The buttons and event cards are interactive on hover and click. Check it out!
 
     
