@@ -19,3 +19,5 @@ On the home page, user can see different activities created by users. Upon creat
     - 'Count me in' button
     - Owner of the group can edit details. Checked by matching the id of the user with the event
     
+
+    
