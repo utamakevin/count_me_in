@@ -57,6 +57,6 @@ User can press the Count Me In button and register their attendance to the event
 - The buttons and event cards are interactive on hover and click. Check it out!
 - Last minute update: Now available on mobile devices.
 
-![Mobile Responsive Design](./readme_images/mobile.jpg)
+![Mobile Responsive Design](./readme_images/mobile.png)
 
     
