@@ -173,8 +173,13 @@ body {
 }
 
 article {
-    width:fit-content;
     width: 400px;
+}
+
+@media screen and (max-width: 410px) {
+    article {
+        width: 95%;
+    }
 }
 
 h1 {
@@ -267,4 +272,9 @@ p {
     white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
+}
+
+.layout_footer {
+    margin: 20px auto;
+    color: gray;
 }
