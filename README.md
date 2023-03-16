@@ -55,5 +55,8 @@ User can press the Count Me In button and register their attendance to the event
 - The user's details are stored in the session object and therefore can be accessed almost anywhere in the app, allowing features such as displaying the username on the header.
 - The css is responsive in smaller screen.
 - The buttons and event cards are interactive on hover and click. Check it out!
+- Last minute update: Now available on mobile devices.
+
+![Mobile Responsive Design](./readme_images/mobile.jpg)
 
     
