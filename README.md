@@ -1,5 +1,5 @@
 # Welcome to My Second App
-Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. It is deployed on render. The app can be accessed through this link https://countmein.onrender.com/.
+Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. It is deployed on render. The app can be accessed through this <a href="https://countmein.onrender.com/">link</a>.
 
 ![Screenshot of Count Me In](./readme_images/screenshot.png)
 
