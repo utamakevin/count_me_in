@@ -50,6 +50,7 @@ The details page also include the count me in, edit and delete button. While all
 User can press the Count Me In button and register their attendance to the event. There is a function to detect whether the user has already counted in. If so, they will be informed on the screen. When a user counts in, the number of people joined will be updated.
 
 # Notes
+- Due to the app being deployed on render, the loading time may vary due to render's algorithm to put the server on sleep after a period of time.
 - A message that there is no events created yet will appear if there is no event on the homescreen so the app does not crash when there is no events in the database.
 - The description input bar could be bigger to indicate that the user can input long passage in it.
 - The user's details are stored in the session object and therefore can be accessed almost anywhere in the app, allowing features such as displaying the username on the header.
