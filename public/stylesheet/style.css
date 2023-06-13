@@ -78,34 +78,41 @@
 
 .main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1660px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 970px) {
-.header {
-    display: block;
-}
-.header_left, .header_right {
-    text-align: center;
-}
-.header li {
-    display: block;
-}
-.main {
-    grid-template-columns: 1fr;
-    width: fit-content;
-    margin: auto;
-}
+    .header {
+        display: block;
+    }
+    .header_left, .header_right {
+        text-align: center;
+    }
+    .header li {
+        display: block;
+    }
+    .main {
+        grid-template-columns: 1fr;
+        width: fit-content;
+        margin: auto;
+    }
 
-article {
-    margin: auto;
-}
+    article {
+        margin: auto;
+    }
 
-.signup_button_div {
-    display: inline-block;
-    width: fit-content;
-    margin: auto;
-}
+    .signup_button_div {
+        display: inline-block;
+        width: fit-content;
+        margin: auto;
+    }
 
 } 
 
