@@ -1,5 +1,5 @@
 # Count Me In
-Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. It is deployed on render. The app can be accessed through this <a href="https://countmein.onrender.com/">link</a>.
+Count Me In is a social app that allows people to create and join activities as groups. This app is made as an exercise to incorporate CRUD abilities (create, read, update, delete) into an app. It is deployed on render. The app can be accessed through this <a href="https://countmein.onrender.com/">link</a>. **Note: the database is hosted in a free plan of render that has a 30 days expiry. The server will go down occassionally as I am not going to renew the database every 30 days.**
 
 ![Screenshot of Count Me In](./readme_images/screenshot.png)
 
